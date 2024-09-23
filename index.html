@@ -9,9 +9,6 @@
 	<title>Michail Kniga</title>
 	
 	<link rel="stylesheet" href="./css/main.css">
-	
-	<script type="text/javascript" src="./js/js.js"></script>
-	
 
 </head>
 
@@ -51,6 +48,10 @@
 				<dd><a href="https://vk.com/krausbombit">PC, PS</a></dd>
 			<dt>Разработка моб. игр</dt>
 				<dd><a href="https://www.tumblr.com/developeruralgreenbug?source=share">Ovnezey</a></dd>	
+			<dt>Увлекаюсь косплеем</dt>
+				<dd><a href="https://vk.com/kraus_bombit">Cosplay</a></dd>
+			<dt>Увлекаюсь саберфайтингом</dt>
+				<dd><a href="https://vk.com/usf_academy">Хилт.Екб</a></dd>	
 		</div>
 				
 		
@@ -58,8 +59,8 @@
 		
 			<dt>Так же мои увлечения</dt>
 			
-				<li>Занимаюсь сборками пк</li>
-				<li>Коллекционирую фигурки по вселенной Star Wars</li>
+				<li>Увлекаюсь сборками пк</li>
+				<li>Коллекционирую фигурки по вселенной Star Wars и не только</li>
 				<li>Путешествую в поисках лучших мест "Где поесть"</li>
 				<li>I will study English</li>
 		</div>
@@ -68,9 +69,55 @@
 		
 		</section>
 		
-		<input type="button" value="VK" onclick="showPic1()">
+		<button id="myButton">Страница VK</button>
+        <div id="qrcodeContainer"></div>
 		
 	</main>
+	
+	
+
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <script>
+        // Функция для создания QR-кода и отображения его при наведении на кнопку
+        function generateQRCode() {
+            var qrcode = new QRCode("qrcodeContainer", {
+                text: "https://vk.com/kraus_bombit", // Замените на URL, который вам нужен
+                width: 128,
+                height: 128
+            });
+        }
+
+        // Функция для скрытия QR-кода
+        function hideQRCode() {
+            var qrcodeContainer = document.getElementById("qrcodeContainer");
+            qrcodeContainer.innerHTML = ""; // Очищаем содержимое контейнера
+        }
+
+        // Находим кнопку по ее ID
+        var button = document.getElementById("myButton");
+
+        // Добавляем обработчики событий для наведения и ухода мыши с кнопки
+        button.addEventListener("mouseenter", generateQRCode);
+        button.addEventListener("mouseleave", hideQRCode);
+		
+		///////////////////////////////////////////////////////////////
+		
+		  // Функция, которая будет выполняться при клике на кнопку
+        function openLink() {
+            // URL, который вы хотите открыть
+            var link = "https://vk.com/kraus_bombit";
+
+            // Открываем ссылку в новой вкладке
+            window.open(link, "_blank");
+        }
+
+        // Находим кнопку по ее ID
+        var button = document.getElementById("myButton");
+
+        // Добавляем обработчик события для клика на кнопку
+        button.addEventListener("click", openLink);
+    </script>
+	
 </body>
 
 </html>
