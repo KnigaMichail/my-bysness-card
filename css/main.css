@@ -108,3 +108,13 @@ input{
  border: ; /* Убираем рамку вокруг кнопки */
   
 }
+
+#myButton {
+            background-color: #F37021;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-family: 'Montserrat', sans-serif;
+        }
