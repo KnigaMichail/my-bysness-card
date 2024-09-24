@@ -20,7 +20,7 @@ a::after {
   left: 0;
   right: 0;
   transform: translateY(1.5em);
-  border-bottom: 1px solid #dadada;
+ /* border-bottom: 1px solid #dadada;*/
   width: 300px;
   
 }
@@ -79,7 +79,7 @@ strong {
   left: 0;
   right: 0;
   transform: translateY(1.5em);
-  border-bottom: 1px solid #dadada;
+  /*border-bottom: 1px solid #dadada;*/
 }
 /*свойство фото*/
 .photo {
@@ -117,4 +117,41 @@ input{
             cursor: pointer;
             border-radius: 5px;
             font-family: 'Montserrat', sans-serif;
+        }
+		
+/* Стили для контейнера карточек */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Стили для каждой карточки */
+        .card {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        /* Эффект при наведении */
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Стили для контента внутри карточки */
+        .card h2 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #666;
         }
