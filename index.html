@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html>
 
@@ -15,8 +16,8 @@
 <body>
 
 	<main class="container">
-	
-		<h1>Михаил Книга</h1>
+	<div class="board">
+		<h1>Kraus_Bombit</h1>
 		
 		<div class="item">
 		
@@ -75,7 +76,7 @@
 		
 		<button id="myButton">Страница VK</button>
         <div id="qrcodeContainer"></div>
-		
+	</div>	
 	</main>
 	
 	
@@ -83,26 +84,26 @@
     <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
     <script>
         // Функция для создания QR-кода и отображения его при наведении на кнопку
-        function generateQRCode() {
-            var qrcode = new QRCode("qrcodeContainer", {
-                text: "https://vk.com/kraus_bombit", // Замените на URL, который вам нужен
-                width: 128,
-                height: 128
-            });
-        }
+       // function generateQRCode() {
+         //   var qrcode = new QRCode("qrcodeContainer", {
+         //       text: "https://vk.com/kraus_bombit", // Замените на URL, который вам нужен
+        //        width: 128,
+        //        height: 128
+        //    });
+       // }
 
         // Функция для скрытия QR-кода
-        function hideQRCode() {
-            var qrcodeContainer = document.getElementById("qrcodeContainer");
-            qrcodeContainer.innerHTML = ""; // Очищаем содержимое контейнера
-        }
+       // function hideQRCode() {
+        //    var qrcodeContainer = document.getElementById("qrcodeContainer");
+        //    qrcodeContainer.innerHTML = ""; // Очищаем содержимое контейнера
+       // }
 
         // Находим кнопку по ее ID
-        var button = document.getElementById("myButton");
+       // var button = document.getElementById("myButton");
 
         // Добавляем обработчики событий для наведения и ухода мыши с кнопки
-        button.addEventListener("mouseenter", generateQRCode);
-        button.addEventListener("mouseleave", hideQRCode);
+       //button.addEventListener("mouseenter", generateQRCode);
+       // button.addEventListener("mouseleave", hideQRCode);
 		
 		///////////////////////////////////////////////////////////////
 		
